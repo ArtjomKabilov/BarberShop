@@ -48,6 +48,7 @@ namespace WebApplication1.Controllers
         }
 
         // GET: Tellimus/Create
+        
         public IActionResult Create()
         {
             ViewData["KasutajaID"] = new SelectList(_context.Kasutaja, "KasutajaID", "KasutajaID");
@@ -55,7 +56,7 @@ namespace WebApplication1.Controllers
             ViewData["TootajaID"] = new SelectList(_context.Tootaja, "TootajaID", "TootajaID");
             return View();
         }
-
+        
         // POST: Tellimus/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
@@ -74,7 +75,7 @@ namespace WebApplication1.Controllers
             ViewData["TootajaID"] = new SelectList(_context.Tootaja, "TootajaID", "TootajaID", tellimus.TootajaID);
             return View(tellimus);
         }
-
+        [HttpPost]
         // GET: Tellimus/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {

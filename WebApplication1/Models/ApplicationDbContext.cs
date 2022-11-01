@@ -1,10 +1,11 @@
-﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System.Data.Entity.ModelConfiguration.Conventions;
 
 namespace WebApplication1.Models
 {
-    public class ApplicationDbContext : DbContext
+    public partial class ApplicationDbContext : IdentityDbContext<IdentityUser>
     {
         public DbSet<Tootaja>? Tootaja { get; set; }
 
