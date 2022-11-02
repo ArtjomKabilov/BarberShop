@@ -7,11 +7,11 @@ namespace WebApplication1.Models
         [Key]
         public int TellimusID { get; set; }
         public int TootajaID { get; set; }
-        public Tootaja Tootaja { get; set; }
+        public Tootaja? Tootaja { get; set; }
         public int TeenusID { get; set; }
-        public Teenus Teenus { get; set; }
+        public Teenus? Teenus { get; set; }
         public int KasutajaID { get; set; }
-        public Kasutaja Kasutaja { get; set; }
+        public Kasutaja? Kasutaja { get; set; }
 
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]

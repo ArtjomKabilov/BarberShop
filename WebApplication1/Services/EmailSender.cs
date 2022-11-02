@@ -22,7 +22,7 @@ namespace WebApplication1.Services
         {
             if (string.IsNullOrEmpty(Options.SendGridKey))
             {
-                throw new Exception("SendGridKey");
+                throw new Exception("New SendGridKey");
             }
             await Execute(Options.SendGridKey, subject, message, toEmail);
         }

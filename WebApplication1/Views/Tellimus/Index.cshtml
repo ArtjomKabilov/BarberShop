@@ -40,13 +40,13 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Tootaja.TootajaID)
+                @Html.DisplayFor(modelItem => item.Tootaja.Nimi)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Teenus.TeenusID)
+                @Html.DisplayFor(modelItem => item.Teenus.Nimetus)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Kasutaja.KasutajaID)
+                @Html.DisplayFor(modelItem => item.Kasutaja.Nimi)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Kuupaev)
