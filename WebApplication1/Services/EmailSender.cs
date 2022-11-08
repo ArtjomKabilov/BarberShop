@@ -20,10 +20,10 @@ namespace WebApplication1.Services
 
         public async Task SendEmailAsync(string toEmail, string subject, string message)
         {
-            if (string.IsNullOrEmpty(Options.SendGridKey))
+            /*if (string.IsNullOrEmpty(Options.SendGridKey))
             {
-                throw new Exception("New SendGridKey");
-            }
+                throw new Exception();
+            }*/
             await Execute(Options.SendGridKey, subject, message, toEmail);
         }
 
@@ -32,7 +32,7 @@ namespace WebApplication1.Services
             var client = new SendGridClient(apiKey);
             var msg = new SendGridMessage()
             {
-                From = new EmailAddress("Joe@contoso.com", "Password Recovery"),
+                From = new EmailAddress("artem1223148@gmail.com", "Password Recovery"),
                 Subject = subject,
                 PlainTextContent = message,
                 HtmlContent = message
